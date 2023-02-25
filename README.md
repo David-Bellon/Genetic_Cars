@@ -42,6 +42,29 @@ I know you want something visual so this is what our actual neural network looks
 It may seem like a chaos but trust me what you see is probably the simplest neural network architecture that exist, is something basic but does our job perfectly so thats what we want.    
 Now that we have our net we have to define how we gonna create children. To do this we are going to mimic a little real genetics, we know that in everey layer there are a number of weights, thay create outputs and so on, so we are going to treat this weights as out genes and what we are gonna do is when we have our to best cars, each one with its own neural net, we take each layer of the net and split it at a random number so that the layer of children that we create is going to be a mix of the first part, up to the splitting point, of one and the second part of the other, from the splitting point to the last weight. And then be do this with all the layers we have.  
 And finnaly but not less important we need some mutation, as in real life, so to achive this we simple create a probability of this to occur and if it happens we simply put a random value in the weight that has randomly be selected.  
-Ok I know your brain is probably melt right now but is not that difficult, lets see an example so we can undertand it crearly:
+Ok I know your brain is probably melt right now but is not that difficult, lets see an example so we can undertand it crearly:  
+We have car A and car B and we only focus on one layer, imagine that in the first layer they have 10 weights an the split is going to be 5. So what we do is take the first 5 weights of the car A and the last 5 weights of car B, those weights go into the children car C so it now has 10 weights which 5 are from one parent and 5 from the other. Mutation is just take one random weight at change its value. See not that difficult.  
 
+## Results
+With everything implemented is time to run it and lets see how it goes. To visualize this what we are going to do is get some data of every generation so we can verify that its getting better a part from just looking at it which is the obvious part.  
+So we run the experiment for 10 generations and lets see what was the best performance in each generation.  
+![BestScoreEvolution](https://user-images.githubusercontent.com/91338053/221368395-61543f02-60a5-40d4-8b21-d80c7009dfff.png)  
+As you can see each generation the cars are getting better and better, well at least one is improving so at first we can say its working cause it is, one small win so hurray!  
+Also we can see as well that at the beginning we suffer a little lose cause the first generation its done randomly so the weights are random but as it goes mutating and breeding they become better.  
 
+---
+
+Now, we can firmly say that it works and we could stop here and continue our lifes with this tremdous win but lets go a little bit further. Maybe only one is better and the rest are not good enough so lets see how the whole generation is. To do this we simply plot the distribution of the scores of every single car in every generation and what be get is this.  
+![image_0](https://user-images.githubusercontent.com/91338053/221368697-392fa708-2958-49b2-b71b-91adaad64048.png)
+![image_1](https://user-images.githubusercontent.com/91338053/221368698-dde73225-b014-4c75-8f73-a6bab8ea33fd.png)
+![image_2](https://user-images.githubusercontent.com/91338053/221368699-feabf3d5-ea64-4b11-b38f-b092875faac7.png)
+![image_3](https://user-images.githubusercontent.com/91338053/221368701-c51f89a4-369a-4852-8a11-90a5cf3fdd94.png)
+![image_4](https://user-images.githubusercontent.com/91338053/221368702-98258d10-d1a3-4814-8818-b1dccbaad8ef.png)
+![image_5](https://user-images.githubusercontent.com/91338053/221368704-2e7bc47e-0ddc-41ac-a5e7-74dae9b8deec.png)
+![image_6](https://user-images.githubusercontent.com/91338053/221368705-de51c1ad-0732-4087-8c65-8b8ba5e10090.png)
+![image_7](https://user-images.githubusercontent.com/91338053/221368707-35657bd1-4140-4edf-bc97-7a5e31284202.png)
+![image_8](https://user-images.githubusercontent.com/91338053/221368708-8611ca3b-0a89-4701-8053-fcd2b9a3d6b1.png)
+![image_9](https://user-images.githubusercontent.com/91338053/221368709-2b3caaaa-8d77-4d9e-a85e-d634c44cc3fd.png)
+![image_10](https://user-images.githubusercontent.com/91338053/221368710-502efd53-10d3-4bcf-8ef2-07e63b0832cd.png)  
+We can see that the further we go into generations they better they become cause more cars achive better scores which means that they survive longer.  
+So as unexpected as it may sound, it worked yeah. A new, fresh, good looking generation of cars has been borned.  
