@@ -27,7 +27,21 @@ May sound strange or someting but this is easy, more whit Unity, just little lin
 What we have to explain here is how our "Game" works. So the car is going to be moving forward in the direction its pointing always, can't go back just forward and then turn but as we turn we are going to rotate the car so we point it to another direction. This is important because when we cast the lines of before we have to have this in count because a sensor in the left not always have to cast the line to the same direction beacause it has rotate. Little bit tricky but sound way harder than it is.  
 Another important thing about the movement is that the speed the car moves is set as the same at the start and never changes and for the rotation, because we want the car to rotate freely, a little or sometimes a lot, we meauser the rotation as a number between -1 up to 1 (-1 left, 1 right) and then we multiply that value with a factor of -0.22, this number is what controlls how "fast" rotate the car, the higher the faster so this number can be change for experiments what we proceed with this value cause is the perfect one for our example.  
 Ok ok to much reading and words but, does it work? Check a Look:  
-https://user-images.githubusercontent.com/91338053/221354042-81c93f27-22fb-48dc-8266-63c29c9de620.mp4
+![upload](https://user-images.githubusercontent.com/91338053/221354285-956d2fff-17a7-430e-a014-3c192be1b2f9.gif)  
+As you can see it moves the way we want and if you are curious yes the lines of the sensors are always facing the right way even if the car rotates. Now that everything works as we want we have to build the "game" itself.  
+### Gameplay
+Our "game" or better called simulation, is going to be as follow. We create one car each time and let them run as mention before until it dies and then spawn another one, we repeat the this process until we reach 20 cars. Once the 20 cars are done we pick the best two, mix the gens and generate another 20 and repeat until we want.  So using little bit of logic we can achive this, I am not going to dig in details but with this explanation you can have an idea how it goes and how to do it.  
+### Closing Unity
+Now that we have everything settle down in Unity is time to the spicy part. We can let Uniy and our UI on the sidelines and dive into how the car is going to make its own choices and how to create children from them. Yes I am talking about neural networks, lets create some life.  
+## Brain of the Car
+So we know that we have to give the car ability to make decisions on how much to rotate to avoid collisions, we are going to do that by a neural network.  
+This neural net is going to have 5 input layers, one for each sensor, then some hidden layers that we can change and add more neurons or less to experiment and an ouput layer with only one neuron, this output is going to be wrap by a hyperbolic tangent function so we have an ouput in the range of -1 to 1.  
+I know you want something visual so this is what our actual neural network looks like, you ask for this not me:
 
+![image](https://user-images.githubusercontent.com/91338053/221355145-ff27ac66-247c-4018-85f4-40a43e3bb3d7.png)
+It may seem like a chaos but trust me what you see is probably the simplest neural network architecture that exist, is something basic but does our job perfectly so thats what we want.    
+Now that we have our net we have to define how we gonna create children. To do this we are going to mimic a little real genetics, we know that in everey layer there are a number of weights, thay create outputs and so on, so we are going to treat this weights as out genes and what we are gonna do is when we have our to best cars, each one with its own neural net, we take each layer of the net and split it at a random number so that the layer of children that we create is going to be a mix of the first part, up to the splitting point, of one and the second part of the other, from the splitting point to the last weight. And then be do this with all the layers we have.  
+And finnaly but not less important we need some mutation, as in real life, so to achive this we simple create a probability of this to occur and if it happens we simply put a random value in the weight that has randomly be selected.  
+Ok I know your brain is probably melt right now but is not that difficult, lets see an example so we can undertand it crearly:
 
 
