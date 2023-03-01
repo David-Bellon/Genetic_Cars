@@ -20,7 +20,7 @@ The same as before, shut up about the look, I know it looks like a spider from M
 An important thing in this project, probably the most important is to measure the distance from the car to the walls around itself. As said before those green boxes are gonna be sensors, we have five so we can have more data and more flexibility around decisions of the direction.  
 If we want to measure the distance to another object, in our case to the walls of the track, we simple go to our friend maths, yep maybe not so friendly but they work so put your head down and commit to them. We simply create a line, we pick the direction but we have to be a little careful cause the reference has to be each green box respectively. As we have our lines and direction then the job is done because walls can be treated as lines so the distance between two lines is easy to compute and we have the distance from each sensor to the closest wall.  
 In our example this are the lines we are gonna cast to measure distance:
-![image](https://user-images.githubusercontent.com/91338053/221320798-caccd78f-b8dc-4888-813a-98337bf81ae4.png)
+![image](https://user-images.githubusercontent.com/91338053/221320798-caccd78f-b8dc-4888-813a-98337bf81ae4.png)  
 So everything is going great, we have the track, the car and we can measure distances to the walls. Now we have to do an important thig, move the car.  
 ### Car Movement  
 May sound strange or someting but this is easy, more whit Unity, just little lines of code and you can have a moving object. We are not gonna enter on details as how are collisions handle and hitoboxes and more cause is not what we need to focus but is not difficult.  
