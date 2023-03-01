@@ -60,3 +60,6 @@ Now, we could firmly say that it works and we could stop here and continue our l
 
 We can see that the further we go into generations they better they become cause more cars achive better scores which means that they survive longer. We can see as well that at some generation there are more cars that achive higher scores but if you pay attention you can see that the overal score of the population is better. So we get less top score individuals but more cars achive better score.  
 So as unexpected as it may sound, it worked yeah. A new, fresh, good looking generation of cars has been borned.  
+## Last Goodbye  
+I feel sad but its time to say goodbye, we started this with a bunch of stupid cars. Now, they have achive knowledge and are capable of complete a full track without crashing. This is our final creation, enjoy and get out of here.
+![final_car](https://user-images.githubusercontent.com/91338053/222275359-51cf103f-5efa-4215-99f9-be707e854e2c.gif)
