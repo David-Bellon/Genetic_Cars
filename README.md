@@ -55,7 +55,7 @@ Also we can see as well that at the beginning we suffer a little lose cause the 
 
 ---
 
-Now, we can firmly say that it works and we could stop here and continue our lifes with this tremdous win but lets go a little bit further. Maybe only one is better and the rest are not good enough so lets see how the whole generation is. To do this we simply plot the distribution of the scores of every single car in every generation and what be get is this.  
+Now, we could firmly say that it works and we could stop here and continue our lifes with this tremdous win but lets go a little bit further. Maybe only one is better and the rest are not good enough so lets see how the whole generation is. To do this we simply plot the distribution of the scores of every single car in every generation and what be get is this.  
 ![car_evolution](https://user-images.githubusercontent.com/91338053/222271615-39580f12-8b5c-47bc-8670-b01745f10000.gif)
 
 We can see that the further we go into generations they better they become cause more cars achive better scores which means that they survive longer. We can see as well that at some generation there are more cars that achive higher scores but if you pay attention you can see that the overal score of the population is better. So we get less top score individuals but more cars achive better score.  
