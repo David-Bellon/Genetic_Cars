@@ -14,7 +14,7 @@ Don't led attention into the car, it's a spoiler. The track is incredible and if
 Ok so we have a track, nice, now we need a car to move cause is important so lets gooooo!!! What am I doing with my life...  
 #### Car  
 Out car is gonna be a simple red rectangle but we need to measure the distance to the walls from the car in multiple directions so the car have enought data to make decisions on were to move and don't crash. To create this sensors we are going to create five green boxes and place them around the car, is more a visual thing for the aesthetic but as well for utility cause those boxes are gonna be are initial position for the lines to measure the distance, more of this later on. Ok so the car will look something like this:  
-![image](https://user-images.githubusercontent.com/91338053/221319750-580bfbc2-052b-46cd-88bd-c1914c84be14.png)
+![image](https://user-images.githubusercontent.com/91338053/221319750-580bfbc2-052b-46cd-88bd-c1914c84be14.png)  
 The same as before, shut up about the look, I know it looks like a spider from Minecraft but is ok I'm not going to model something different.  
 ### Line Cast (RayCast)
 An important thing in this project, probably the most important is to measure the distance from the car to the walls around itself. As said before those green boxes are gonna be are sensors, we have five so we can have more data and more flexibility around decisions of the direction.  
