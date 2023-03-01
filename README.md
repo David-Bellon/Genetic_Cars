@@ -48,23 +48,15 @@ We have car A and car B and we only focus on one layer, imagine that in the firs
 ## Results
 With everything implemented is time to run it and lets see how it goes. To visualize this what we are going to do is get some data of every generation so we can verify that its getting better a part from just looking at it which is the obvious part.  
 So we run the experiment for 10 generations and lets see what was the best performance in each generation.  
-![BestScoreEvolution](https://user-images.githubusercontent.com/91338053/221368395-61543f02-60a5-40d4-8b21-d80c7009dfff.png)  
+ ![BestScoreEvolution](https://user-images.githubusercontent.com/91338053/222271689-1396f71c-1266-4590-a2c8-5eebcbfb1f1c.png)
+
 As you can see each generation the cars are getting better and better, well at least one is improving so at first we can say its working cause it is, one small win so hurray!  
 Also we can see as well that at the beginning we suffer a little lose cause the first generation its done randomly so the weights are random but as it goes mutating and breeding they become better.  
 
 ---
 
 Now, we can firmly say that it works and we could stop here and continue our lifes with this tremdous win but lets go a little bit further. Maybe only one is better and the rest are not good enough so lets see how the whole generation is. To do this we simply plot the distribution of the scores of every single car in every generation and what be get is this.  
-![image_0](https://user-images.githubusercontent.com/91338053/221368697-392fa708-2958-49b2-b71b-91adaad64048.png)
-![image_1](https://user-images.githubusercontent.com/91338053/221368698-dde73225-b014-4c75-8f73-a6bab8ea33fd.png)
-![image_2](https://user-images.githubusercontent.com/91338053/221368699-feabf3d5-ea64-4b11-b38f-b092875faac7.png)
-![image_3](https://user-images.githubusercontent.com/91338053/221368701-c51f89a4-369a-4852-8a11-90a5cf3fdd94.png)
-![image_4](https://user-images.githubusercontent.com/91338053/221368702-98258d10-d1a3-4814-8818-b1dccbaad8ef.png)
-![image_5](https://user-images.githubusercontent.com/91338053/221368704-2e7bc47e-0ddc-41ac-a5e7-74dae9b8deec.png)
-![image_6](https://user-images.githubusercontent.com/91338053/221368705-de51c1ad-0732-4087-8c65-8b8ba5e10090.png)
-![image_7](https://user-images.githubusercontent.com/91338053/221368707-35657bd1-4140-4edf-bc97-7a5e31284202.png)
-![image_8](https://user-images.githubusercontent.com/91338053/221368708-8611ca3b-0a89-4701-8053-fcd2b9a3d6b1.png)
-![image_9](https://user-images.githubusercontent.com/91338053/221368709-2b3caaaa-8d77-4d9e-a85e-d634c44cc3fd.png)
-![image_10](https://user-images.githubusercontent.com/91338053/221368710-502efd53-10d3-4bcf-8ef2-07e63b0832cd.png)  
-We can see that the further we go into generations they better they become cause more cars achive better scores which means that they survive longer.  
+![car_evolution](https://user-images.githubusercontent.com/91338053/222271615-39580f12-8b5c-47bc-8670-b01745f10000.gif)
+
+We can see that the further we go into generations they better they become cause more cars achive better scores which means that they survive longer. We can see as well that at some generation there are more cars that achive higher scores but if you pay attention you can see that the overal score of the population is better. So we get less top score individuals but more cars achive better score.  
 So as unexpected as it may sound, it worked yeah. A new, fresh, good looking generation of cars has been borned.  
