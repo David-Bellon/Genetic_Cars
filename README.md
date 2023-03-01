@@ -17,7 +17,7 @@ Out car is gonna be a simple red rectangle but we need to measure the distance t
 ![image](https://user-images.githubusercontent.com/91338053/221319750-580bfbc2-052b-46cd-88bd-c1914c84be14.png)  
 The same as before, shut up about the look, I know it looks like a spider from Minecraft but is ok I'm not going to model something different.  
 ### Line Cast (RayCast)
-An important thing in this project, probably the most important is to measure the distance from the car to the walls around itself. As said before those green boxes are gonna be are sensors, we have five so we can have more data and more flexibility around decisions of the direction.  
+An important thing in this project, probably the most important is to measure the distance from the car to the walls around itself. As said before those green boxes are gonna be sensors, we have five so we can have more data and more flexibility around decisions of the direction.  
 If we want to measure the distance to another object, in our case to the walls of the track, we simple go to our friend maths, yep maybe not so friendly but they work so put our head down and commit to them. We simply create a line, we pick the direction but we have to be a little careful cause the reference has to be each green box respectively. As we have our lines and direction then the job is done because walls can be treat as walls so the distance between to lines is easy to compute and we have the distance from each sensor to the closest wall.  
 In our example this are the lines we are gonna cast to measure distance:
 ![image](https://user-images.githubusercontent.com/91338053/221320798-caccd78f-b8dc-4888-813a-98337bf81ae4.png)
